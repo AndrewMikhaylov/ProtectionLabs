@@ -8,7 +8,6 @@ isAdmin = False
 def install(fs):
     global username
     global isAdmin
-    print(list(fs.keys()))
 
     username = input('What is your username? ')
     if str(username) == "Admin":
@@ -90,7 +89,6 @@ def mkdir(args):
     elif username =="Admin":
         print("Can't create directory in user spaces")
         return
-    # create an empty directory there and sync back to shelve dictionary!
     current_dictionary()[args[0]] = {}
     fs.sync()
 
